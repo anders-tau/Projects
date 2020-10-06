@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.ArrayDeque;
+import java.util.PriorityQueue;
 
 
 public class Program {
@@ -175,10 +181,12 @@ public class Program {
     
     //Пример с коллекцией LinkedHashSet
     private static void LinkedHashSetExample() {
+        LinkedHashSet<String> groups = new LinkedHashSet<>();
     }
     
     //Пример с коллекцией TreeSet
     private static void TreeSetExample() {
+        TreeSet<String> groups  = new TreeSet<>();
     }
     
     //Пример с коллекцией HashMap
@@ -207,18 +215,22 @@ public class Program {
     
     //Пример с коллекцией LinkedHashMap
     private static void LinkedHashMapExample() {
+        LinkedHashMap groups = new LinkedHashMap();
     }
     
     //Пример с коллекцией TreeMap
     private static void TreeMapExample() {
+        TreeMap groups = new TreeMap();
     }
     
     //Пример с коллекцией ArrayDeque
     private static void ArrayDequeExample() {
+        ArrayDeque<String> groups = new ArrayDeque<>();
     }
     
     //Пример с коллекцией PriorityDeque
-    private static void PriorityDequeExample() {
+    private static void PriorityQueueExample() {
+        PriorityQueue<String> groups = new PriorityQueue<>();
     }
 }
 
