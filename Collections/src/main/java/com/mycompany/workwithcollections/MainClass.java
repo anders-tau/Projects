@@ -9,7 +9,7 @@ public class MainClass {
         //hashsetexample();
         //treesetexample();
         //hashmapexample();
-        treemapexample();
+        //treemapexample();
     }
     
     //Пример с коллекцией ArrayList
@@ -281,12 +281,7 @@ public class MainClass {
         }        
     }
     
-    //Пример с коллекцией LinkedHashMap
-    private static void linkedhashmapexample() {
-        Map groups = new LinkedHashMap();
-    }
-    
-    //Пример с коллекцией TreeMap
+        //Пример с коллекцией TreeMap
     private static void treemapexample() {
         Map<String, Person> musicians = new TreeMap<>();
         musicians.put("1", new Person("Dave Gahan"));
@@ -308,7 +303,12 @@ public class MainClass {
         System.out.println("-----------------------------");
         
     }
-    
+
+    //Пример с коллекцией LinkedHashMap
+    private static void linkedhashmapexample() {
+        Map groups = new LinkedHashMap();
+    }
+        
     //Пример с коллекцией ArrayDeque
     private static void arraydequeexample() {
         Queue<String> groups = new ArrayDeque<>();
@@ -318,6 +318,15 @@ public class MainClass {
     private static void priorityqueueexample() {
         Queue<String> groups = new PriorityQueue<>();
     }
+    
+    //Пример с колллекцией EnumSet
+    private static void enumsetexample() {
+    }
+    
+    //Пример с колллекцией EnumMap
+    private static void enummapexample() {
+    }
+
     
     static class Person{      
         String name;
