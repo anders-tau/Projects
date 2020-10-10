@@ -1,31 +1,18 @@
-package WorkWithCollections;
+package com.mycompany.workwithcollections;
 
-import java.util.Collections;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.TreeMap;
-import java.util.TreeSet;
-import java.util.ArrayDeque;
-import java.util.PriorityQueue;
+import java.util.*;
 
-
-public class Program {
+public class MainClass {
     public static void main(String[] args) {
-        //ArrayListExample();
-        //LinkedListExample();
-        //HashSetExample();
-        HashMapExample();
+        arraylistexample();
+        //linkedlistexample();
+        //hashsetexample();
+        //hashmapexample();
     }
     //Пример с коллекцией ArrayList
-    private static void ArrayListExample() {
-        boolean result;
+    private static void arraylistexample() {
         
-        ArrayList<String> groups = new ArrayList<>();
+        List<String> groups = new ArrayList<>();
         
         groups.add("Modern Talking"); //Добавляем значения в коллекцию
         groups.add("Bad Boys Blue");
@@ -58,7 +45,7 @@ public class Program {
         System.out.println("----------------------");
         
         // Используя тернарную операцию, проверяем содержит ли коллекция элемент 
-        result = groups.contains("Pet Shop Boys") ? true : false;
+        boolean result = groups.contains("Pet Shop Boys") ? true : false;
         //Выводим результат
         System.out.println(result);
         System.out.println("----------------------");
@@ -70,7 +57,7 @@ public class Program {
         
         //При удалении стоит воспользоваться методом TrimToSize()
         //чтобы привести размер массива в соответствие с хранимыми значениями
-        groups.trimToSize();
+        ((ArrayList)groups).trimToSize();
           
         //Сохраняем коллекцию в массив groupsArray
         Object[] groupsArray = groups.toArray();
@@ -84,13 +71,15 @@ public class Program {
     }
     
     //Пример с коллекцией LinkedList
-    private static void LinkedListExample() {
-        LinkedList<String> states = new LinkedList<>();
+    private static void linkedlistexample() {
+        
+        List<String> states = new LinkedList<>();
+        
         // Добавляем в коллекцию элементы
         states.add("Germany");
         states.add("France");
-        states.addLast("Great Britain"); // Добавляем элемент на последнее место
-        states.addFirst("Spain"); // Добавляем элемент на первое место
+        ((LinkedList)states).addLast("Great Britain"); // Добавляем элемент на последнее место
+        ((LinkedList)states).addFirst("Spain"); // Добавляем элемент на первое место
         states.add(1, "Italy"); // Добавляем элемент по индексу 1
         
         for(String state : states){
@@ -116,8 +105,8 @@ public class Program {
         }
         
         states.remove("Germany");
-        states.removeFirst(); // Удаляем первый элемент
-        states.removeLast(); // Удаляем последний элемент
+        ((LinkedList)states).removeFirst(); // Удаляем первый элемент
+        ((LinkedList)states).removeLast(); // Удаляем последний элемент
         
         for(String state : states){
             System.out.println(state);
@@ -149,100 +138,93 @@ public class Program {
     }        
   
     //Пример с коллекцией HashSet
-    private static void HashSetExample() {
-        boolean result;
-        int hashcode_pop;
-        int hashcode_rock;
+    private static void hashsetexample() {
         
-        HashSet<String> pop_groups = new HashSet<>();
-        HashSet<String> rock_groups = new HashSet<>();
+        Set<String> popGroups = new HashSet<>();
+        Set<String> rockGroups = new HashSet<>();
         
-        result = pop_groups.add("Modern Talking");
-        result = pop_groups.add("Bad Boys Blue");
-        result = pop_groups.add("CCCatch");
-        result = pop_groups.add("Fancy");
+        popGroups.add("Modern Talking");
+        popGroups.add("Bad Boys Blue");
+        popGroups.add("CCCatch");
+        popGroups.add("Fancy");
         
-        result = rock_groups.add("Queen");
-        result = rock_groups.add("Metallica");
-        result = rock_groups.add("Rammstein");
-        result = rock_groups.add("ZZ Top");
+        rockGroups.add("Queen");
+        rockGroups.add("Metallica");
+        rockGroups.add("Rammstein");
+        rockGroups.add("ZZ Top");
         
-        hashcode_rock = rock_groups.hashCode();
-        hashcode_pop = pop_groups.hashCode();
+        int hashcodeRock = rockGroups.hashCode();
+        int hashcodePop = popGroups.hashCode();
         
-        result = rock_groups.addAll(pop_groups);
-        for (Object group : rock_groups) {
+        rockGroups.addAll(popGroups);
+        for (Object group : rockGroups) {
             System.out.println(group);
         }
         
-        System.out.println(hashcode_rock);
-        System.out.println(hashcode_pop);
+        System.out.println(hashcodeRock);
+        System.out.println(hashcodePop);
     }
     
     //Пример с коллекцией LinkedHashSet
-    private static void LinkedHashSetExample() {
-        LinkedHashSet<String> groups = new LinkedHashSet<>();
+    private static void linkedhashsetexample() {
+        Set<String> groups = new LinkedHashSet<>();
     }
     
     //Пример с коллекцией TreeSet
-    private static void TreeSetExample() {
-        TreeSet<String> groups  = new TreeSet<>();
+    private static void treesetexample() {
+        Set<String> groups  = new TreeSet<>();
     }
     
     //Пример с коллекцией HashMap
-    private static void HashMapExample() {
-        boolean result;
+    private static void hashmapexample() {
         
-        HashMap pop_groups = new HashMap();
-        HashMap rock_groups = new HashMap();
+        HashMap popGroups = new HashMap();
+        HashMap rockGroups = new HashMap();
         
-        pop_groups.put(5,"Modern Talking");
-        pop_groups.put(6, "Bad Boys Blue");
-        pop_groups.put(7, "CCCatch");
-        pop_groups.put(8, "Fancy");
+        popGroups.put(5,"Modern Talking");
+        popGroups.put(6, "Bad Boys Blue");
+        popGroups.put(7, "CCCatch");
+        popGroups.put(8, "Fancy");
         
-        rock_groups.put(1, "Queen");
-        rock_groups.put(2, "Metallica");
-        rock_groups.put(3, "Rammstein");
-        rock_groups.put(4, "ZZ Top");
+        rockGroups.put(1, "Queen");
+        rockGroups.put(2, "Metallica");
+        rockGroups.put(3, "Rammstein");
+        rockGroups.put(4, "ZZ Top");
             
-        rock_groups.putAll(pop_groups);
+        rockGroups.putAll(popGroups);
         
-        for (int counter = 1; counter <= rock_groups.size(); counter++){
-            System.out.println(rock_groups.get(counter));
+        for (int counter = 1; counter <= rockGroups.size(); counter++){
+            System.out.println(rockGroups.get(counter));
         }        
     }
     
     //Пример с коллекцией LinkedHashMap
-    private static void LinkedHashMapExample() {
-        LinkedHashMap groups = new LinkedHashMap();
+    private static void linkedhashmapexample() {
+        Map groups = new LinkedHashMap();
     }
     
     //Пример с коллекцией TreeMap
-    private static void TreeMapExample() {
-        TreeMap groups = new TreeMap();
+    private static void treemapexample() {
+        Map groups = new TreeMap();
     }
     
     //Пример с коллекцией ArrayDeque
-    private static void ArrayDequeExample() {
-        ArrayDeque<String> groups = new ArrayDeque<>();
+    private static void arraydequeexample() {
+        Queue<String> groups = new ArrayDeque<>();
     }
     
     //Пример с коллекцией PriorityDeque
-    private static void PriorityQueueExample() {
-        PriorityQueue<String> groups = new PriorityQueue<>();
-    }
-}
-
-class Person{
-      
-    String name;
-    
-    public Person(String value){
-        this.name = value;
+    private static void priorityqueueexample() {
+        Queue<String> groups = new PriorityQueue<>();
     }
     
-    String getName(){
-        return name;
-    }
+    static class Person{      
+        String name;
+        public Person(String value){
+            this.name = value;
+        }
+        String getName(){
+            return name;
+        }
+    }    
 }
