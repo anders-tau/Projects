@@ -3,6 +3,11 @@ package com.mycompany.workwithcollections;
 import java.util.*;
 
 public class MainClass {
+    
+    enum Courses {
+            Java, Spring, Hibernate, JavaScript, Python, SQL
+        }
+    
     public static void main(String[] args) {
         //arraylistexample();
         //linkedlistexample();
@@ -10,6 +15,10 @@ public class MainClass {
         //treesetexample();
         //hashmapexample();
         //treemapexample();
+        //enumsetexample();
+        //enumexample();
+        //arraydequeexample();
+        enummapexample();
     }
     
     //Пример с коллекцией ArrayList
@@ -303,31 +312,77 @@ public class MainClass {
         System.out.println("-----------------------------");
         
     }
-
-    //Пример с коллекцией LinkedHashMap
-    private static void linkedhashmapexample() {
-        Map groups = new LinkedHashMap();
-    }
-        
+       
     //Пример с коллекцией ArrayDeque
     private static void arraydequeexample() {
         Queue<String> groups = new ArrayDeque<>();
+        groups.add("Dire Straits");
+        groups.add("Depeche Mode");
+        groups.add("Moby");
+        groups.add("Nazareth");
+        groups.offer("Deep Purple");        
+        System.out.println(groups.element());
+        System.out.println(groups.peek());
+        System.out.println(groups.poll());
+        System.out.println(groups.remove());
     }
     
     //Пример с коллекцией PriorityDeque
     private static void priorityqueueexample() {
         Queue<String> groups = new PriorityQueue<>();
     }
+     
+    //Пример с перечислением Enum
+    private static void enumexample() {
+        System.out.println(Courses.Java.name());
+        System.out.println(Courses.Java.ordinal());
+        
+        Courses[] CoursesArray = Courses.values();
+        System.out.println(Arrays.toString(CoursesArray));
+        System.out.println("----------------------------------------");
+    }
     
     //Пример с колллекцией EnumSet
     private static void enumsetexample() {
+        EnumSet<Courses> studyCourses;
+        studyCourses = EnumSet.of(Courses.Java, Courses.Spring, Courses.Hibernate, Courses.JavaScript, Courses.SQL);
+        System.out.println(studyCourses);
+        System.out.println("----------------------------------------");
+        studyCourses = EnumSet.range(Courses.Spring, Courses.SQL);
+        System.out.println(studyCourses);
+        System.out.println("----------------------------------------");
+        studyCourses = EnumSet.allOf(Courses.class);
+        System.out.println(studyCourses);
+        System.out.println("----------------------------------------");
+        Collection col = new ArrayList<>();
+        col.add(Courses.Java);
+        col.add(Courses.Hibernate);
+        col.add(Courses.Spring);
+        EnumSet finalCourse = EnumSet.copyOf(col);
+        System.out.println(finalCourse);
+        System.out.println("----------------------------------------");
+        EnumSet<Courses> mainCourses;
+        mainCourses = EnumSet.of(Courses.Java, Courses.Spring, Courses.SQL);
+        EnumSet<Courses> complementCourses;
+        complementCourses = EnumSet.complementOf(mainCourses);
+        System.out.println(complementCourses);
+        System.out.println("----------------------------------------");
     }
     
     //Пример с колллекцией EnumMap
     private static void enummapexample() {
+        EnumMap<Courses, String> trainingCourses = new EnumMap<>(Courses.class);
+        trainingCourses.put(Courses.Java, "Very important");
+        trainingCourses.put(Courses.Python, "Not now");
+        trainingCourses.put(Courses.SQL, "Middle level");
+        System.out.println(trainingCourses);
+        System.out.println("----------------------------------------");
+        System.out.println(trainingCourses.get(Courses.Java));
+        for(Map.Entry<Courses, String> item : trainingCourses.entrySet()){
+            System.out.printf("Ключ: %s  Значение: %s \n", item.getKey(), item.getValue());
+        }
     }
 
-    
     static class Person{      
         String name;
         public Person(String value){
