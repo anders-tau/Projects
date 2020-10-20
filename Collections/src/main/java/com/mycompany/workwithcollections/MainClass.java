@@ -1,11 +1,14 @@
 package com.mycompany.workwithcollections;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class MainClass {
     
     enum Courses {
-            Java, Spring, Hibernate, JavaScript, Python, SQL
+            JAVA, SPRING, HIBERNATE, JAVASCRIPT, PYTHON, SQL
         }
     
     public static void main(String[] args) {
@@ -18,7 +21,8 @@ public class MainClass {
         //enumsetexample();
         //enumexample();
         //arraydequeexample();
-        enummapexample();
+        //enummapexample();
+        streamandlambdaexample();
     }
     
     //Пример с коллекцией ArrayList
@@ -334,8 +338,8 @@ public class MainClass {
      
     //Пример с перечислением Enum
     private static void enumexample() {
-        System.out.println(Courses.Java.name());
-        System.out.println(Courses.Java.ordinal());
+        System.out.println(Courses.JAVA.name());
+        System.out.println(Courses.JAVA.ordinal());
         
         Courses[] CoursesArray = Courses.values();
         System.out.println(Arrays.toString(CoursesArray));
@@ -345,24 +349,24 @@ public class MainClass {
     //Пример с колллекцией EnumSet
     private static void enumsetexample() {
         EnumSet<Courses> studyCourses;
-        studyCourses = EnumSet.of(Courses.Java, Courses.Spring, Courses.Hibernate, Courses.JavaScript, Courses.SQL);
+        studyCourses = EnumSet.of(Courses.JAVA, Courses.SPRING, Courses.HIBERNATE, Courses.JAVASCRIPT, Courses.SQL);
         System.out.println(studyCourses);
         System.out.println("----------------------------------------");
-        studyCourses = EnumSet.range(Courses.Spring, Courses.SQL);
+        studyCourses = EnumSet.range(Courses.SPRING, Courses.SQL);
         System.out.println(studyCourses);
         System.out.println("----------------------------------------");
         studyCourses = EnumSet.allOf(Courses.class);
         System.out.println(studyCourses);
         System.out.println("----------------------------------------");
         Collection col = new ArrayList<>();
-        col.add(Courses.Java);
-        col.add(Courses.Hibernate);
-        col.add(Courses.Spring);
+        col.add(Courses.JAVA);
+        col.add(Courses.HIBERNATE);
+        col.add(Courses.SPRING);
         EnumSet finalCourse = EnumSet.copyOf(col);
         System.out.println(finalCourse);
         System.out.println("----------------------------------------");
         EnumSet<Courses> mainCourses;
-        mainCourses = EnumSet.of(Courses.Java, Courses.Spring, Courses.SQL);
+        mainCourses = EnumSet.of(Courses.JAVA, Courses.SPRING, Courses.SQL);
         EnumSet<Courses> complementCourses;
         complementCourses = EnumSet.complementOf(mainCourses);
         System.out.println(complementCourses);
@@ -372,17 +376,28 @@ public class MainClass {
     //Пример с колллекцией EnumMap
     private static void enummapexample() {
         EnumMap<Courses, String> trainingCourses = new EnumMap<>(Courses.class);
-        trainingCourses.put(Courses.Java, "Very important");
-        trainingCourses.put(Courses.Python, "Not now");
+        trainingCourses.put(Courses.JAVA, "Very important");
+        trainingCourses.put(Courses.PYTHON, "Not now");
         trainingCourses.put(Courses.SQL, "Middle level");
         System.out.println(trainingCourses);
         System.out.println("----------------------------------------");
-        System.out.println(trainingCourses.get(Courses.Java));
+        System.out.println(trainingCourses.get(Courses.JAVA));
         for(Map.Entry<Courses, String> item : trainingCourses.entrySet()){
             System.out.printf("Ключ: %s  Значение: %s \n", item.getKey(), item.getValue());
         }
     }
 
+    //Пример Stream API и лямбда
+    private static void streamandlambdaexample(){
+        
+        Stream<String> streamFromValues = Stream.of("a1", "a2", "a3");
+        System.out.println("streamFromValues = " + streamFromValues.collect(Collectors.toList()));
+        
+        IntStream streamFromString = "123".chars();
+        System.out.print("streamFromString = ");
+        streamFromString.forEach(e -> System.out.print(e + " , ")); // напечатает streamFromString = 49 , 50 , 51 ,
+        System.out.println();
+    }    
     static class Person{      
         String name;
         public Person(String value){
