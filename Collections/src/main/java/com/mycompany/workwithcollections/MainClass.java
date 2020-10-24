@@ -17,12 +17,12 @@ public class MainClass {
         //hashsetexample();
         //treesetexample();
         //hashmapexample();
-        //treemapexample();
+        treemapexample();
         //enumsetexample();
         //enumexample();
         //arraydequeexample();
         //enummapexample();
-        streamandlambdaexample();
+        //streamandlambdaexample();
     }
     
     //Пример с коллекцией ArrayList
@@ -38,11 +38,8 @@ public class MainClass {
         groups.add(4, "Savage"); //Добавляем элемент по индексу
         
         Collections.sort(groups, Collections.reverseOrder()); //Сортируем в порядке убывания
-        
         //Выводим все элементы коллекции
-        for (String group : groups) {
-            System.out.println(group);
-        }
+        groups.forEach(System.out::println);
         System.out.println("----------------------");
         
         System.out.println(groups.get(1)); //Получаем элемент по индексу
@@ -55,13 +52,10 @@ public class MainClass {
         System.out.println("----------------------");
         
         //Выводим все элементы коллекции
-        for(String group : groups){
-            System.out.println(group);
-        }
+        groups.forEach(System.out::println);
         System.out.println("----------------------");
         
-        // Используя тернарную операцию, проверяем содержит ли коллекция элемент 
-        boolean result = groups.contains("Pet Shop Boys") ? true : false;
+        boolean result = groups.contains("Pet Shop Boys");
         //Выводим результат
         System.out.println(result);
         System.out.println("----------------------");
@@ -97,10 +91,7 @@ public class MainClass {
         ((LinkedList)states).addLast("Great Britain"); // Добавляем элемент на последнее место
         ((LinkedList)states).addFirst("Spain"); // Добавляем элемент на первое место
         states.add(1, "Italy"); // Добавляем элемент по индексу 1
-        
-        for(String state : states){
-            System.out.println(state);
-        }
+        states.forEach(x -> System.out.println(x));
         System.out.println("--------------------");
         
         System.out.printf("Коллекция states содержит %d элементов \n", states.size());
@@ -110,9 +101,7 @@ public class MainClass {
         System.out.println("--------------------");
         
         states.set(1, "Portugal");
-        for(String state : states){
-            System.out.println(state);
-        }
+        states.forEach(x -> System.out.println(x));
         System.out.println("--------------------");
         
         //Проверяем на наличие элемента в списке
@@ -123,32 +112,28 @@ public class MainClass {
         states.remove("Germany");
         ((LinkedList)states).removeFirst(); // Удаляем первый элемент
         ((LinkedList)states).removeLast(); // Удаляем последний элемент
-        
-        for(String state : states){
-            System.out.println(state);
-        }
+        states.forEach(System.out::println);
         System.out.println("-----------not sorted-------------");
         
         Collections.sort(states);
         
-        for(String state : states){
+        states.forEach(state -> {
             System.out.println(state);
-        }
+        });
         System.out.println("-----------sorted-----------------");
           
         //В качестве объектов в коллекции можно хранить свои классы
         //Класс Person объявлен ниже с конструктором, позволяющим задавать
         //имя при создании класса
-        LinkedList<Person> people = new LinkedList<Person>();
+        LinkedList<Person> people = new LinkedList<>();
         
         people.add(new Person("Thomas Anders"));
         people.addFirst(new Person("Diter Bolen"));
         people.addLast(new Person("Freddie Mercury"));
         people.remove(1); // Удаляем второй элемент
-          
-        for(Person p : people){
+        people.forEach(p -> {
             System.out.println(p.getName());
-        }
+        });
         Person first = people.getFirst();
         System.out.println(first.getName()); // Выводим первый элемент
     }        
@@ -175,9 +160,7 @@ public class MainClass {
         System.out.println(hashcodePop);        
              
         rockGroups.addAll(popGroups);
-        for (Object group : rockGroups) {
-            System.out.println(group);
-        }
+        rockGroups.forEach(x -> System.out.println(x));
         // Пытаемся добавить элемент, который уже есть в коллекции
         boolean isAdded = rockGroups.add("Queen");
         System.out.println(isAdded);    //Должны получить результат false
@@ -264,23 +247,19 @@ public class MainClass {
         System.out.println("keys-------------------------");
         
         Set<Integer> keys = rockGroups.keySet();
-        for (Integer key : keys) {
-            System.out.println(key);
-        }
+        keys.forEach(System.out::println);
         
         System.out.println("values-----------------------");
         
         Collection<String> values = rockGroups.values();
-        for (String value : values) {
-            System.out.println(value);
-        }
+        values.forEach(System.out::println);
         
         System.out.println("-----------------------------");
         
         // Перебор элементов
-        for(Map.Entry<Integer, String> item : rockGroups.entrySet()){
+        rockGroups.entrySet().forEach(item -> {
             System.out.printf("Key: %d  Value: %s \n", item.getKey(), item.getValue());
-        }
+        });
         
         System.out.println("-----------------------------");
         
@@ -289,9 +268,9 @@ public class MainClass {
         musicians.put("1i2", new Person("Till Lindemann"));
         musicians.put("1i3", new Person("James Hetfield"));
          
-        for(Map.Entry<String, Person> item : musicians.entrySet()){
+        musicians.entrySet().forEach(item -> {
             System.out.printf("Key: %s  Value: %s \n", item.getKey(), item.getValue().getName());
-        }        
+        });        
     }
     
         //Пример с коллекцией TreeMap
@@ -302,16 +281,16 @@ public class MainClass {
         musicians.put("3", new Person("James Hetfield"));
         
         Map<String, Person> afterMap = ((TreeMap)musicians).tailMap("2");
-        for(Map.Entry<String, Person> itemAfter : afterMap.entrySet()){
-           System.out.printf("Key: %s  Value: %s \n", itemAfter.getKey(), itemAfter.getValue().getName());
-        }        
+        afterMap.entrySet().forEach(itemAfter -> {
+            System.out.printf("Key: %s  Value: %s \n", itemAfter.getKey(), itemAfter.getValue().getName());
+        });        
         
         System.out.println("-----------------------------");
         
         Map<String, Person> beforeMap = ((TreeMap)musicians).headMap("3");
-        for(Map.Entry<String, Person> itemBefore : beforeMap.entrySet()){
-           System.out.printf("Key: %s  Value: %s \n", itemBefore.getKey(), itemBefore.getValue().getName());
-        }
+        beforeMap.entrySet().forEach(itemBefore -> {
+            System.out.printf("Key: %s  Value: %s \n", itemBefore.getKey(), itemBefore.getValue().getName());
+        });
         
         System.out.println("-----------------------------");
         
@@ -382,9 +361,9 @@ public class MainClass {
         System.out.println(trainingCourses);
         System.out.println("----------------------------------------");
         System.out.println(trainingCourses.get(Courses.JAVA));
-        for(Map.Entry<Courses, String> item : trainingCourses.entrySet()){
+        trainingCourses.entrySet().forEach(item -> {
             System.out.printf("Ключ: %s  Значение: %s \n", item.getKey(), item.getValue());
-        }
+        });
     }
 
     //Пример Stream API и лямбда
@@ -398,6 +377,7 @@ public class MainClass {
         streamFromString.forEach(e -> System.out.print(e + " , ")); // напечатает streamFromString = 49 , 50 , 51 ,
         System.out.println();
     }    
+    
     static class Person{      
         String name;
         public Person(String value){
