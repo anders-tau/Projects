@@ -160,10 +160,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603776413161" />
-    <state x="120" y="0" key="SettingsEditor" timestamp="1603545704737">
+    <state x="270" y="195" key="Performance.Activity.Monitor" timestamp="1603799977768">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="120" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603545704737" />
+    <state x="270" y="195" key="Performance.Activity.Monitor/0.0.1280.680@0.0.1280.680" timestamp="1603799977768" />
+    <state x="120" y="0" key="SettingsEditor" timestamp="1603800819549">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="120" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603800819549" />
     <state x="189" y="78" width="902" height="555" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603775372242">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
