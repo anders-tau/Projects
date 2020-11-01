@@ -1,6 +1,5 @@
 package com.mycompany.hackerrank;
 
-import java.io.*;
 import java.util.*;
 
 //public class Solution {
@@ -94,8 +93,7 @@ class Result {
 }
 
 public class Solution {
-    public static void main(String[] args) throws IOException {
-        //int n = Integer.parseInt(bufferedReader.readLine().trim());
+    public static void main(String[] args) {
         List<List<Integer>> arr = new ArrayList<>();
         List<Integer> String1= new ArrayList<>();
         String1.add(11);
