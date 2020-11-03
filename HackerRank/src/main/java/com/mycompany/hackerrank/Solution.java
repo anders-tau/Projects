@@ -1,11 +1,15 @@
 package com.mycompany.hackerrank;
 
+import java.text.DecimalFormat;
 import java.util.*;
+import java.io.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 //public class Solution {
 
-    //First test
-    // Complete the compareTriplets function below.
+//First test
+// Complete the compareTriplets function below.
 //    static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
 //        int alice = 0;
 //        int bob = 0;
@@ -38,7 +42,7 @@ import java.util.*;
 //        System.out.println(result);
 //    }
     
-    //Second test
+//Second test
 //    static long aVeryBigSum(long[] ar) {
 //        long sum = 0;
 //        for (long i : ar) {
@@ -58,61 +62,162 @@ import java.util.*;
 //        long result = aVeryBigSum(ar);
 //        System.out.println(result);
 //    }
-    
 //}
 
-class Result {
-    /*
-     * Complete the 'diagonalDifference' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
-     */
-    public static int diagonalDifference(List<List<Integer>> arr) {
-    // Write your code here
-        int indexRight = 0;
-        int stringNumber = 0;
-        int sumLeft = 0;
-        int sumRight = 0;
-        int valueLeft;
-        int valueRight;
-        for (List<Integer> counter : arr) {
-            valueLeft = counter.get(stringNumber);
-            if (stringNumber == 0) {
-                indexRight = counter.size() - 1;
-            } else {
-                indexRight = indexRight - 1;
-            }
-            valueRight = counter.get(indexRight);
-            stringNumber = stringNumber + 1;
-            sumLeft = sumLeft + valueLeft;
-            sumRight = sumRight + valueRight;
-        }
-        return Math.abs(sumLeft - sumRight);
-    }
-}
+//Third test
+//class Result {
+//    /*
+//     * Complete the 'diagonalDifference' function below.
+//     *
+//     * The function is expected to return an INTEGER.
+//     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+//     */
+//    public static int diagonalDifference(List<List<Integer>> arr) {
+//    // Write your code here
+//        int indexRight = 0;
+//        int stringNumber = 0;
+//        int sumLeft = 0;
+//        int sumRight = 0;
+//        int valueLeft;
+//        int valueRight;
+//        for (List<Integer> counter : arr) {
+//            valueLeft = counter.get(stringNumber);
+//            if (stringNumber == 0) {
+//                indexRight = counter.size() - 1;
+//            } else {
+//                indexRight = indexRight - 1;
+//            }
+//            valueRight = counter.get(indexRight);
+//            stringNumber = stringNumber + 1;
+//            sumLeft = sumLeft + valueLeft;
+//            sumRight = sumRight + valueRight;
+//        }
+//        return Math.abs(sumLeft - sumRight);
+//    }
+//}
+//
+//public class Solution {
+//    public static void main(String[] args) {
+//        List<List<Integer>> arr = new ArrayList<>();
+//        List<Integer> String1= new ArrayList<>();
+//        String1.add(11);
+//        String1.add(2);
+//        String1.add(4);
+//        List<Integer> String2 = new ArrayList<>();
+//        String2.add(4);
+//        String2.add(5);
+//        String2.add(6);
+//        List<Integer> String3 = new ArrayList<>();
+//        String3.add(10);
+//        String3.add(8);
+//        String3.add(-12);
+//
+//        arr.add(String1);
+//        arr.add(String2);
+//        arr.add(String3);
+//
+//        int result = Result.diagonalDifference(arr);
+//        System.out.println(result);
+//    }
+//}
 
+//Fourth test
+//public class Solution {
+//    /*
+//     * Complete the simpleArraySum function below.
+//     */
+//    static int simpleArraySum(int[] ar) {
+//        int result = Arrays.stream(ar).sum();
+//        return result;
+//    }
+//
+//    private static final Scanner scanner = new Scanner(System.in);
+//
+//    public static void main(String[] args) throws IOException {
+//        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+//
+//        int arCount = Integer.parseInt(scanner.nextLine().trim());
+//
+//        int[] ar = new int[arCount];
+//
+//        String[] arItems = scanner.nextLine().split(" ");
+//
+//        for (int arItr = 0; arItr < arCount; arItr++) {
+//            int arItem = Integer.parseInt(arItems[arItr].trim());
+//            ar[arItr] = arItem;
+//        }
+//
+//        int result = simpleArraySum(ar);
+//
+//        bufferedWriter.write(String.valueOf(result));
+//        bufferedWriter.newLine();
+//
+//        bufferedWriter.close();
+//    }
+//}
+
+//Fifth test
+//public class Solution {
+//
+//    // Complete the plusMinus function below.
+//    static void plusMinus(int[] arr) {
+//        long positiveCount = Arrays.stream(arr).filter(s->s>0).count();
+//        long negativeCount = Arrays.stream(arr).filter(s->s<0).count();
+//        long zeroCount = Arrays.stream(arr).filter(s->s==0).count();
+//        double positiveRatio = (double)positiveCount/arr.length;
+//        double negativeRatio = (double)negativeCount/arr.length;
+//        double zeroRatio = (double)zeroCount/arr.length;
+//        System.out.println(new DecimalFormat("#0.000000").format(positiveRatio));
+//        System.out.println(new DecimalFormat("#0.000000").format(negativeRatio));
+//        System.out.println(new DecimalFormat("#0.000000").format(zeroRatio));
+//    }
+//
+//    private static final Scanner scanner = new Scanner(System.in);
+//
+//    public static void main(String[] args) {
+//        int n = scanner.nextInt();
+//        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+//
+//        int[] arr = new int[n];
+//
+//        String[] arrItems = scanner.nextLine().split(" ");
+//        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+//
+//        for (int i = 0; i < n; i++) {
+//            int arrItem = Integer.parseInt(arrItems[i]);
+//            arr[i] = arrItem;
+//        }
+//
+//        plusMinus(arr);
+//
+//        scanner.close();
+//    }
+//}
+
+//Sixth Test
 public class Solution {
+
+    // Complete the staircase function below.
+    static void staircase(int n) {
+        for (int i = 1; i < n+1; i++) {
+            for (int y = n-i; y > 0; y--) {
+                System.out.print(" ");
+            }
+            for (int y = 1; y < i+1; y++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        List<List<Integer>> arr = new ArrayList<>();
-        List<Integer> String1= new ArrayList<>();
-        String1.add(11);
-        String1.add(2);
-        String1.add(4);
-        List<Integer> String2 = new ArrayList<>();
-        String2.add(4);
-        String2.add(5);
-        String2.add(6);
-        List<Integer> String3 = new ArrayList<>();
-        String3.add(10);
-        String3.add(8);
-        String3.add(-12);
-        
-        arr.add(String1);
-        arr.add(String2);
-        arr.add(String3);
-        
-        int result = Result.diagonalDifference(arr);
-        System.out.println(result);
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        staircase(n);
+
+        scanner.close();
     }
 }

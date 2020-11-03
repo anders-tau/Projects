@@ -28,7 +28,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ff4fea0-8bee-464a-b8ba-c79dc58efcf7" name="Default Changelist" comment="" />
+    <list default="true" id="4ff4fea0-8bee-464a-b8ba-c79dc58efcf7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/hackerrank/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/hackerrank/Solution.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +49,71 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.hackerrank.Solution" />
+      <module name="HackerRank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mycompany.hackerrank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Solution" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -84,11 +151,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="141" y="0" key="SettingsEditor" timestamp="1604219984059">
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604387647378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604219984059" />
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604387647378" />
+    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1604387498467">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604387498467" />
+    <state width="1236" height="142" key="GridCell.Tab.0.bottom" timestamp="1604398490215">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="142" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604398490215" />
+    <state width="1236" height="142" key="GridCell.Tab.0.center" timestamp="1604398490215">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="142" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604398490215" />
+    <state width="1236" height="142" key="GridCell.Tab.0.left" timestamp="1604398490215">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="142" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604398490215" />
+    <state width="1236" height="142" key="GridCell.Tab.0.right" timestamp="1604398490215">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="142" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604398490215" />
+    <state x="141" y="0" key="SettingsEditor" timestamp="1604390001864">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604390001864" />
   </component>
 </project>
