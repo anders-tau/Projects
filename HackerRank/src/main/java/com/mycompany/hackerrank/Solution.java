@@ -316,7 +316,7 @@ import java.util.*;
 //Test Eight - с использованием regex (20 баллов на HackerRank за это задание)
 //class UsernameValidator {
 //
-//    public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9-_]{7,29}$";
+//    public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9_]{7,29}$";
 //}
 //
 //public class Solution {
@@ -335,3 +335,19 @@ import java.util.*;
 //        }
 //    }
 //}
+
+class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while (in.hasNext()) {
+            String IP = in.next();
+            System.out.println(IP.matches(new MyRegex().pattern));
+        }
+
+    }
+}
+
+class MyRegex {
+    public static final String pattern = "^[0-9][0-9]{7,29}$";
+}
