@@ -1,10 +1,6 @@
 package com.mycompany.hackerrank;
 
-import java.text.DecimalFormat;
 import java.util.*;
-import java.io.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 //public class Solution {
 
@@ -195,29 +191,147 @@ import java.util.stream.Stream;
 //}
 
 //Sixth Test
-public class Solution {
+//public class Solution {
+//
+//    // Complete the staircase function below.
+//    static void staircase(int n) {
+//        for (int i = 1; i < n+1; i++) {
+//            for (int y = n-i; y > 0; y--) {
+//                System.out.print(" ");
+//            }
+//            for (int y = 1; y < i+1; y++) {
+//                System.out.print("#");
+//            }
+//            System.out.println();
+//        }
+//    }
+//
+//    private static final Scanner scanner = new Scanner(System.in);
+//
+//    public static void main(String[] args) {
+//        int n = scanner.nextInt();
+//        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+//
+//        staircase(n);
+//
+//        scanner.close();
+//    }
+//}
 
-    // Complete the staircase function below.
-    static void staircase(int n) {
-        for (int i = 1; i < n+1; i++) {
-            for (int y = n-i; y > 0; y--) {
-                System.out.print(" ");
-            }
-            for (int y = 1; y < i+1; y++) {
-                System.out.print("#");
-            }
-            System.out.println();
-        }
-    }
+//Test Seven
+//public class Solution {
+//
+//    static void weird(int n) {
+//        boolean b = (n%2 != 0);
+//        if(b) {
+//            System.out.println("Weird");
+//        }
+//        else {
+//            if ((n >= 2) & (n <= 5)) {
+//                System.out.println("Not Weird");
+//            }
+//            if ((n >= 6) & (n <= 20)) {
+//                System.out.println("Weird");
+//            }
+//            if (n > 20) {
+//                System.out.println("Not Weird");
+//            }
+//        }
+//    }
+//
+//    private static final Scanner scanner = new Scanner(System.in);
+//
+//    public static void main(String[] args) {
+//        int n = scanner.nextInt();
+//        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+//
+//        weird(n);
+//
+//        scanner.close();
+//    }
+//}
 
-    private static final Scanner scanner = new Scanner(System.in);
+//Test Eight без использования regex :)
+//class UsernameValidator {
+//
+//    public static String regularExpression = null;
+//
+//    public static String Validator(String username) {
+//        char[] arr = username.toCharArray();
+//        //Проверка на длину имени
+//        if (username.length() < 8) return regularExpression = "Invalid";
+//        if (username.length() > 30) return regularExpression = "Invalid";
+//        //Проверка на буквы, цифры, знак подчеркивания и первый символ
+//        boolean flag = true;
+//        for (int i = 0; i < arr.length; i++) {
+//            int ascii = arr[i];
+//            if (i==0) {
+//                if (((ascii >= 48) && (ascii <= 57)) || (ascii == 95)) {
+//                    flag = false;
+//                    break;
+//                }
+//            }
+//            if ((ascii >= 48) && (ascii <= 57)) {}
+//            else if ((ascii >= 65) && (ascii <= 90)) {}
+//            else if (ascii == 95) {}
+//            else if ((ascii >= 97) && (ascii <= 122)) {}
+//            else {
+//                flag = false;
+//                break;
+//            }
+//        }
+//        if (!flag) return regularExpression = "Invalid";
+//        else return regularExpression = "Valid";
+//    }
+//
+//}
+//
+//public class Solution {
+//
+//    private static final Scanner scanner = new Scanner(System.in);
+//
+//    public static void main(String[] args) {
+//        int n = scanner.nextInt();
+//        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+//
+//        String[] arr = new String[n];
+//        for (int i = 0; i < arr.length; i++)
+//        {
+//            String Item = scanner.nextLine();
+//            scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+//            arr[i] = Item;
+//        }
+//
+//        scanner.close();
+//
+//        for (int i = 0; i < arr.length; i++)
+//        {
+//            String result = UsernameValidator.Validator(arr[i]);
+//            System.out.println(result);
+//        }
+//
+//    }
+//}
 
-    public static void main(String[] args) {
-        int n = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        staircase(n);
-
-        scanner.close();
-    }
-}
+//Test Eight - с использованием regex (20 баллов на HackerRank за это задание)
+//class UsernameValidator {
+//
+//    public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9-_]{7,29}$";
+//}
+//
+//public class Solution {
+//    private static final Scanner scan = new Scanner(System.in);
+//
+//    public static void main(String[] args) {
+//        int n = Integer.parseInt(scan.nextLine());
+//        while (n-- != 0) {
+//            String userName = scan.nextLine();
+//
+//            if (userName.matches(UsernameValidator.regularExpression)) {
+//                System.out.println("Valid");
+//            } else {
+//                System.out.println("Invalid");
+//            }
+//        }
+//    }
+//}
