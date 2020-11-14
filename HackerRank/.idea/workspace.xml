@@ -28,7 +28,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="047df0b2-9aee-4cba-8c2d-7b9ed847cf9f" name="Default Changelist" comment="" />
+    <list default="true" id="4ff4fea0-8bee-464a-b8ba-c79dc58efcf7" name="Default Changelist" comment="Regex">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/hackerrank/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/hackerrank/Solution.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,14 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1k5cUAg2HbCESxlHHngcCYQlUMU" />
+  <component name="ProjectId" id="1jgHu5NpGXreaNMdQtjzaguYYTo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,11 +48,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SimpleSpringApp" />
-    <property name="project.structure.last.edited" value="SDK Location" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -72,6 +65,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Solution" />
@@ -79,14 +116,32 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\user\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="047df0b2-9aee-4cba-8c2d-7b9ed847cf9f" name="Default Changelist" comment="" />
-      <created>1604993908249</created>
+      <changelist id="4ff4fea0-8bee-464a-b8ba-c79dc58efcf7" name="Default Changelist" comment="" />
+      <created>1604219039302</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604993908249</updated>
+      <updated>1604219039302</updated>
     </task>
+    <task id="LOCAL-00001" summary="03_11_2020">
+      <created>1604398528418</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604398528418</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Regex">
+      <created>1604739986160</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604739986160</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,34 +168,43 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="03_11_2020" />
+    <MESSAGE value="Regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Regex" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="420" y="97" key="FileChooserDialogImpl" timestamp="1605385487044">
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604387647378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="420" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605385487044" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1605385495571">
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604387647378" />
+    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1604387498467">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605385495571" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1605385495570">
+    <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604387498467" />
+    <state width="1236" height="142" key="GridCell.Tab.0.bottom" timestamp="1604741546880">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605385495570" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1605385495569">
+    <state width="1236" height="142" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604741546880" />
+    <state width="1236" height="142" key="GridCell.Tab.0.center" timestamp="1604741546880">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605385495569" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1605385495570">
+    <state width="1236" height="142" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604741546880" />
+    <state width="1236" height="142" key="GridCell.Tab.0.left" timestamp="1604741546879">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605385495570" />
-    <state x="143" y="0" key="SettingsEditor" timestamp="1605385656812">
+    <state width="1236" height="142" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604741546879" />
+    <state width="1236" height="142" key="GridCell.Tab.0.right" timestamp="1604741546880">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="143" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605385656812" />
-    <state x="461" y="256" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605385702629">
+    <state width="1236" height="142" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604741546880" />
+    <state x="141" y="0" key="SettingsEditor" timestamp="1604390001864">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="461" y="256" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1605385702629" />
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604390001864" />
+    <state x="232" y="72" key="Vcs.Push.Dialog.v2" timestamp="1604740013267">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="232" y="72" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604740013267" />
   </component>
 </project>

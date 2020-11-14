@@ -24,7 +24,7 @@ import java.util.*;
 //        result.add(bob);
 //        return result;
 //        }
-//
+//    
 //    public static void main(String[] args) throws IOException {
 //        List<Integer> a = new ArrayList<>();
 //        a.add(5);
@@ -37,7 +37,7 @@ import java.util.*;
 //        List<Integer> result = compareTriplets(a, b);
 //        System.out.println(result);
 //    }
-
+    
 //Second test
 //    static long aVeryBigSum(long[] ar) {
 //        long sum = 0;
@@ -54,7 +54,7 @@ import java.util.*;
 //        for (int i = 0; i < arCount; i++) {
 //            long arItem = Long.parseLong(arItems[i]);
 //            ar[i] = arItem;
-//        }
+//        }   
 //        long result = aVeryBigSum(ar);
 //        System.out.println(result);
 //    }
@@ -336,157 +336,18 @@ import java.util.*;
 //    }
 //}
 
-//class Solution {
-//
-//    public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        while (in.hasNext()) {
-//            String IP = in.next();
-//            System.out.println(IP.matches(new MyRegex().pattern));
-//        }
-//
-//    }
-//}
-//
-//class MyRegex {
-//    public static final String pattern = "^[0-9][0-9]{7,29}$";
-//}
-
-//class Solution{
-//    public static void main(String []argh)
-//    {
-//        Scanner sc = new Scanner(System.in);
-//        int t = sc.nextInt();
-//
-//        long y = (long) Math.pow(-2,63);
-//        long z = (long) Math.pow(2,63);
-//
-//        for(int i = 0; i < t; i++)
-//        {
-//            try
-//            {
-//                long x = sc.nextLong();
-//                System.out.println(x+" can be fitted in:");
-//                if(x>=-128 && x<=127)System.out.println("* byte");
-//                if(x>=-32768 && x<=32767)System.out.println("* short");
-//                if(x>=-2147483648 && x<=2147483647)System.out.println("* int");
-//                if(x>= y && x<= z)System.out.println("* long");
-//            }
-//            catch(Exception e)
-//            {
-//                System.out.println(sc.next()+" can't be fitted anywhere.");
-//            }
-//
-//        }
-//    }
-//}
-
-//class Printer
-//{
-//    public <T> void printArray(T[] items) {
-//        for(T item: items){
-//            System.out.println(item);
-//        }
-//    }
-//}
-//
-//public class Solution {
-//
-//
-//    public static void main( String args[] ) {
-//        Printer myPrinter = new Printer();
-//        Integer[] intArray = { 1, 2, 3 };
-//        String[] stringArray = {"Hello", "World"};
-//        myPrinter.printArray(intArray);
-//        myPrinter.printArray(stringArray);
-//        int count = 0;
-//
-//        for (Method method : Printer.class.getDeclaredMethods()) {
-//            String name = method.getName();
-//
-//            if(name.equals("printArray"))
-//                count++;
-//        }
-//
-//        if(count > 1)System.out.println("Method overloading is not allowed!");
-//
-//    }
-//}
-
-//class Arithmetic{
-//    public int add(int a, int b) {
-//        int sum = a + b;
-//        return sum;
-//    }
-//}
-//
-//class Adder extends Arithmetic{
-//
-//}
-//
-//public class Solution{
-//    public static void main(String []args){
-//        // Create a new Adder object
-//        Adder a = new Adder();
-//
-//        // Print the name of the superclass on a new line
-//        System.out.println("My superclass is: " + a.getClass().getSuperclass().getName());
-//
-//        // Print the result of 3 calls to Adder's `add(int,int)` method as 3 space-separated integers:
-//        System.out.print(a.add(10,32) + " " + a.add(10,3) + " " + a.add(10,10) + "\n");
-//    }
-//}
-
-//interface AdvancedArithmetic{
-//    int divisor_sum(int n);
-//}
-//
-//class MyCalculator implements AdvancedArithmetic{
-//    public int divisor_sum(int n){
-//        int sum = 0;
-//        for (int i = 1; i <= n; i++){
-//            if (n%i == 0) {
-//                sum = sum + i;
-//            }
-//        }
-//        return sum;
-//    }
-//}
-//
-//class Solution{
-//    public static void main(String []args){
-//        MyCalculator my_calculator = new MyCalculator();
-//        System.out.print("I implemented: ");
-//        ImplementedInterfaceNames(my_calculator);
-//        Scanner sc = new Scanner(System.in);
-//        int n = sc.nextInt();
-//        System.out.print(my_calculator.divisor_sum(n) + "\n");
-//        sc.close();
-//    }
-//    /*
-//     *  ImplementedInterfaceNames method takes an object and prints the name of the interfaces it implemented
-//     */
-//    static void ImplementedInterfaceNames(Object o){
-//        Class[] theInterfaces = o.getClass().getInterfaces();
-//        for (int i = 0; i < theInterfaces.length; i++){
-//            String interfaceName = theInterfaces[i].getName();
-//            System.out.println(interfaceName);
-//        }
-//    }
-//}
-
-public class Solution {
+class Solution {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        String[] arr = new String[n];
-        for (int i = 0; i < n; i++) {
-            String ss = sc.nextLine();
-            arr[i] = ss;
+        Scanner in = new Scanner(System.in);
+        while (in.hasNext()) {
+            String IP = in.next();
+            System.out.println(IP.matches(new MyRegex().pattern));
         }
-        for (int i = 0; i < n; i++) {
-            System.out.println(i + 1 + " " + arr[i]);
-        }
+
     }
+}
+
+class MyRegex {
+    public static final String pattern = "^[0-9][0-9]{7,29}$";
 }
