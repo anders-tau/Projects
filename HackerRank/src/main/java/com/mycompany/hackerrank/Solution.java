@@ -342,12 +342,13 @@ class Solution {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
             String IP = in.next();
-            System.out.println(IP.matches(new MyRegex().pattern));
+            System.out.println(IP.matches(MyRegex.PATTERN));
         }
 
     }
 }
 
 class MyRegex {
-    public static final String pattern = "^[0-9][0-9]{7,29}$";
+    public static final String PATTERN = "^[0-9][0-9]{7,29}$";
 }
+
