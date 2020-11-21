@@ -20,7 +20,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="com.mycompany.IoC.MusicPlayer">
+          class="com.mycompany.IoC.MusicPlayer"
+          scope="prototype">
         <property name="musicList">
                 <list>
                     <ref bean="musicBean1"/>
