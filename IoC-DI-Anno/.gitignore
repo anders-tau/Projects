@@ -1,0 +1,8 @@
+# Default ignored files
+/.idea/workspace.xml
+/.idea/vcs.xml
+/.idea/misc.xml
+/.idea/jarRepositories.xml
+/.idea/compiler.xml
+/.idea/encodings.xml
+/target/
