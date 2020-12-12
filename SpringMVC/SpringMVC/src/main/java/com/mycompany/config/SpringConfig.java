@@ -1,5 +1,8 @@
 package com.mycompany.config;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +24,12 @@ public class SpringConfig implements WebMvcConfigurer{
     @Autowired
     public SpringConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
+    }
+
+    @Bean
+    public DataSource dataSource() throws NamingException {
+        InitialContext context = new InitialContext();
+        return (DataSource) context.lookup("java:/comp/env/jdbc/test");
     }
 
     @Bean
