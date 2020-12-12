@@ -77,6 +77,7 @@ public class PersonDAO {
             preparedStatement.setInt(2, person.getAge());
             preparedStatement.setString(3, person.getEmail());
             preparedStatement.executeUpdate();
+            preparedStatement.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } finally {
