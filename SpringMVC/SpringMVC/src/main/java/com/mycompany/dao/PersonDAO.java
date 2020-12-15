@@ -36,8 +36,8 @@ public class PersonDAO {
             }
             resultSet.close();
             statement.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException sql) {
+            sql.printStackTrace();
         } finally {
             connection.close();
         }
@@ -60,8 +60,8 @@ public class PersonDAO {
             }
             resultSet.close();
             preparedStatement.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException sql) {
+            sql.printStackTrace();
         } finally {
             connection.close();
         }
@@ -78,8 +78,8 @@ public class PersonDAO {
             preparedStatement.setString(3, person.getEmail());
             preparedStatement.executeUpdate();
             preparedStatement.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException sql) {
+            sql.printStackTrace();
         } finally {
             connection.close();
         }
@@ -96,8 +96,8 @@ public class PersonDAO {
             preparedStatement.setInt(4, id);
             preparedStatement.executeUpdate();
             preparedStatement.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException sql) {
+            sql.printStackTrace();
         } finally {
             connection.close();
         }
@@ -111,8 +111,8 @@ public class PersonDAO {
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
             preparedStatement.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException sql) {
+            sql.printStackTrace();
         } finally {
             connection.close();
         }
