@@ -3,7 +3,6 @@ package com.mycompany.dao;
 import com.mycompany.models.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -69,7 +68,6 @@ public class PersonDAO {
         return person;
     }
 
-    @Transactional
     public void create(Person person) throws SQLException {
         Connection connection = dataSource.getConnection();
         try {
@@ -87,7 +85,6 @@ public class PersonDAO {
         }
     }
 
-    @Transactional
     public void update(int id, Person updatedPerson) throws SQLException {
         Connection connection = dataSource.getConnection();
         try {
@@ -106,7 +103,6 @@ public class PersonDAO {
         }
     }
 
-    @Transactional
     public void delete(int id) throws SQLException {
         Connection connection = dataSource.getConnection();
         try {
