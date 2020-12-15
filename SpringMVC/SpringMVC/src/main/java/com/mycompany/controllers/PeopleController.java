@@ -65,4 +65,9 @@ public class PeopleController {
         personDAO.delete(id);
         return "redirect:/people";
     }
+
+    @ExceptionHandler(SQLException.class)
+    public String handleException(SQLException e) {
+        return e.getMessage();
+    }
 }
