@@ -8,7 +8,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c2a6b4-0aa7-4e42-9062-920a72aa2cf7" name="Default Changelist" comment="" />
+    <list default="true" id="c0c0b02c-c316-49c0-b528-15220761dedc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +86,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="de015180-26fd-49f6-ac30-18e0ea6871f4" name="Default Changelist" comment="" />
+      <changelist id="c0c0b02c-c316-49c0-b528-15220761dedc" name="Default Changelist" comment="" />
       <created>1601399275372</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -170,6 +172,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="270" y="195" key="Performance.Activity.Monitor/0.0.1280.680@0.0.1280.680" timestamp="1603799977768" />
+    <state x="442" y="46" key="RollbackChangesDialog" timestamp="1608626978277">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="442" y="46" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1608626978277" />
     <state x="120" y="0" key="SettingsEditor" timestamp="1603800819549">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
