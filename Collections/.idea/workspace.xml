@@ -8,7 +8,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0c0b02c-c316-49c0-b528-15220761dedc" name="Default Changelist" comment="" />
+    <list default="true" id="c0c0b02c-c316-49c0-b528-15220761dedc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../JUnitExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JUnitExample/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
