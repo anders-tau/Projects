@@ -336,18 +336,6 @@ import java.util.*;
 //    }
 //}
 
-class Solution {
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        while (in.hasNext()) {
-            String IP = in.next();
-            System.out.println(IP.matches(MyRegex.PATTERN));
-        }
-
-    }
-}
-
 class MyRegex {
     public static final String PATTERN = "^[0-9][0-9]{7,29}$";
 }
