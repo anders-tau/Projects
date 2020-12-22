@@ -23,22 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45e0b703-24d9-453d-be8e-ed9ce96e2092" name="Default Changelist" comment="JUnit5 simple example">
-      <change afterPath="$PROJECT_DIR$/../IoC-DI-Anno/target/classes/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoC-DI-Anno/target/classes/com/mycompany/IoC_Anno/ClassicalMusic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoC-DI-Anno/target/classes/com/mycompany/IoC_Anno/JazzMusic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoC-DI-Anno/target/classes/com/mycompany/IoC_Anno/Music.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoC-DI-Anno/target/classes/com/mycompany/IoC_Anno/MusicPlayer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoC-DI-Anno/target/classes/com/mycompany/IoC_Anno/RockMusic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoC-DI-Anno/target/classes/com/mycompany/IoC_Anno/TestSpring.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/StringUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/StringUtilsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
