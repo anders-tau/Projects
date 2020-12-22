@@ -1,8 +1,8 @@
-/workspace.xml
-/compiler.xml
-/dictionaries
-/encodings.xml
-/jarRepositories.xml
-/misc.xml
-/vcs.xml
+/.idea/workspace.xml
+/.idea/compiler.xml
+/.idea/dictionaries
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/.idea/vcs.xml
 /target/
