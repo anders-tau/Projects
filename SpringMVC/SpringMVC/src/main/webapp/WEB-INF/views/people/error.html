@@ -2,11 +2,11 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Error page</title>
+    <title>SQL error page</title>
 </head>
 <body>
-    <th:if test="${not empty errMsg}">
-        <h2>${errMsg}</h2>
-    </th:if>
+<!--    <th:if test="${not empty errMsg}">-->
+        <p th:text="${exceptionMsg}"></p>
+<!--    </th:if>-->
 </body>
 </html>

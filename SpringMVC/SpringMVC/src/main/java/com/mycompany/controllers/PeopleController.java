@@ -67,10 +67,10 @@ public class PeopleController {
         return "redirect:/people";
     }
 
-    @ExceptionHandler(SQLException.class)
+    @ExceptionHandler({SQLException.class})
     public ModelAndView handleException(SQLException ex) {
         ModelAndView model = new ModelAndView("people/error");
-        model.addObject("errMsg", ex.getMessage());
+        model.addObject("exceptionMsg", ex.getMessage());
         return model;
     }
 }
