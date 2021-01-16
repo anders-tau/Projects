@@ -40,6 +40,7 @@ public class SpringConfig implements WebMvcConfigurer{
     public LocalSessionFactoryBean sessionFactory() throws NamingException {
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource());
+        sessionFactoryBean.setPackagesToScan("com.mycompany");
         return sessionFactoryBean;
     }
 

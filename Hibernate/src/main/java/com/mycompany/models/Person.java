@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "person")
+@Table(name = "Person")
 public class Person implements Serializable {
 
     @Id

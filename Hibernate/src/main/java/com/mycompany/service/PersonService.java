@@ -1,10 +1,10 @@
-package com.mycompany.dao;
+package com.mycompany.service;
 
 import com.mycompany.models.Person;
 
 import java.util.List;
 
-public interface PersonDAO {
+public interface PersonService {
     public List<Person> getAll();
     public Person getById(int id);
     public void add(Person person);
