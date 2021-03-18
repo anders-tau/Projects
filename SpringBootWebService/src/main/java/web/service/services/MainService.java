@@ -1,5 +1,7 @@
 package web.service.services;
 
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -11,23 +13,37 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 
 @Service
 public class MainService {
 
-    private final WebClient webClient;
+//    private final WebClient webClient;
+//
+//    public MainService(WebClient.Builder webClientBuilder) {
+//        this.webClient = webClientBuilder.baseUrl("https://localhost:8080/generate").build();
+//    }
 
-    public MainService(WebClient.Builder webClientBuilder) {
-        this.webClient = webClientBuilder.baseUrl("https://localhost:8080/generate").build();
+    public Mono<Fields> createFields(WebClient webClient, Fields field)
+    {
+        return webClient.post()
+                .uri("/fields")
+                .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                .body(Mono.just(field), Fields.class)
+                .retrieve()
+                .bodyToMono(Fields.class);
+    }
+
+    public void sendRequestWebFlux(String serverUrl, Fields paramFields) {
+        WebClient webClient = WebClient.create("http://localhost:8080");
+        createFields(webClient, paramFields);
     }
 
     public String message() {
         return "The service responded";
     }
 
-    public void SendRequestToREST(String serverUrl, String host, String jsonobject, Fields paramFields) {
+    public void sendRequestToREST(String serverUrl, String host, String jsonobject, Fields paramFields) {
 
         StringBuilder sb = new StringBuilder();
         String http = serverUrl;
@@ -86,9 +102,9 @@ public class MainService {
 
     }
 
-    public Mono<Fields> someRestCall(String name) {
-        return this.webClient.get().uri("/{name}/details", name)
-                .retrieve().bodyToMono(Fields.class);
-    }
+//    public Mono<Fields> someRestCall(String name) {
+//        return this.webClient.get().uri("/{name}/details", name)
+//                .retrieve().bodyToMono(Fields.class);
+//    }
 }
 

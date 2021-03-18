@@ -29,8 +29,8 @@ public class MainController {
     @PostMapping("/form")
     public String ParamsSubmit(@ModelAttribute Fields myFields, Model model) {
         model.addAttribute("form", myFields);
-        String jsonobject = "service filegeneration success";
-        service.SendRequestToREST("http://localhost:8080/generate", "localhost", jsonobject, myFields);
+        String jsonobject = "JSON object";
+        service.sendRequestToREST("http://localhost:8080/generate", "localhost", jsonobject, myFields);
         return "result";
     }
 }
