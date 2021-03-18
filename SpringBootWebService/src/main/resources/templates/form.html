@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/form}" th:object="${form}" method="post">
+    <p>Id: <input type="text" th:field="*{id}" /></p>
+    <p>Param1: <input type="text" th:field="*{param1}" /></p>
+    <p>Param2: <input type="text" th:field="*{param2}" /></p>
+    <p>Param3: <input type="text" th:field="*{param3}" /></p>
+    <p>Param4: <input type="text" th:field="*{param4}" /></p>
+    <p>Param5: <input type="text" th:field="*{param5}" /></p>
+    <p><input type="submit" value="Send" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

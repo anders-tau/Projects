@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'Id: ' + ${form.id}" />
+<p th:text="'Param1: ' + ${form.param1}" />
+<p th:text="'Param2: ' + ${form.param2}" />
+<p th:text="'Param3: ' + ${form.param3}" />
+<p th:text="'Param4: ' + ${form.param4}" />
+<p th:text="'Param5: ' + ${form.param5}" />
+<a href="/form">Send another message</a>
+</body>
+</html>
