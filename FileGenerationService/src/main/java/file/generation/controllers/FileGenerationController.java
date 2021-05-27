@@ -1,42 +1,55 @@
 package file.generation.controllers;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import file.generation.models.FileGenerationEvent;
 import file.generation.services.FileGenerationResponse;
-import file.generation.services.FileGenerationRequest;
+import file.generation.dao.FileGenerationEventDAO;
+import file.generation.services.FileGenerationService;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 @RestController
-@RequestMapping("/generate")
 public class FileGenerationController {
 
-    private final String sharedKey = "SHARED_KEY";
+    private static final String SUCCESS_STATUS = "http_ok";
+    private static final String EMPTY_STATUS = "no_content";
 
-    private static final String SUCCESS_STATUS = "service success";
-    private static final String ERROR_STATUS = "service error";
-    private static final int CODE_SUCCESS = 100;
-    private static final int AUTH_FAILURE = 102;
+    private final FileGenerationService fileGenerationService;
 
-//    @GetMapping
-//    public FileGenerationResponse serviceStatus() {
-//        return new FileGenerationResponse(SUCCESS_STATUS, 1);
-//    }
+    private final FileGenerationEventDAO fileGenerationEventDAO;
 
-    //@PostMapping("/file")
-    @RequestMapping(value = "/file", method = RequestMethod.POST)
-    public FileGenerationResponse servicePOSTHandling(@RequestParam(value = "key") String key, @RequestBody FileGenerationRequest request) {
+    public FileGenerationController(FileGenerationService service, FileGenerationEventDAO fileGenerationEventDAO) {
+        this.fileGenerationService = service;
+        this.fileGenerationEventDAO = fileGenerationEventDAO;
+    }
 
-        //final FileGenerationResponse response;
-        FileGenerationResponse response = new FileGenerationResponse();
+    @GetMapping("/status")
+    public FileGenerationResponse serviceStatus() {
+        int codeHttpOk = 200;
+        return new FileGenerationResponse(SUCCESS_STATUS, codeHttpOk);
+    }
 
-        if (sharedKey.equalsIgnoreCase(key)) {
-            String itemId = request.getItemId();
-            // Process the request
-            // ....
-            // Return success response to the client.
-            response = new FileGenerationResponse(SUCCESS_STATUS, CODE_SUCCESS);
+    @GetMapping("/answer")
+    public FileGenerationResponse serviceAnswer() throws SQLException, IOException {
+        int codeHttpOk = 200;
+        int codeNoContent = 204;
+        if (fileGenerationEventDAO.countAll("events_ready") != 0) {
+            FileGenerationEvent eventReadyFirst = fileGenerationEventDAO.findFirst("events_ready");
+            fileGenerationService.sendFileToWebService(eventReadyFirst, fileGenerationEventDAO);
+            return new FileGenerationResponse(SUCCESS_STATUS, codeHttpOk);
         } else {
-            response = new FileGenerationResponse(ERROR_STATUS, AUTH_FAILURE);
+            return new FileGenerationResponse(EMPTY_STATUS, codeNoContent);
         }
-        return response;
+    }
+
+    @PostMapping("/generate")
+    public FileGenerationResponse serviceGenerate(@RequestBody String body) throws SQLException, IOException {
+        int codeHttpCreated = 201;
+        FileGenerationEvent event = new ObjectMapper().readValue(body, FileGenerationEvent.class);
+        System.out.println(body);
+        fileGenerationEventDAO.create(event, "events");
+        return new FileGenerationResponse(SUCCESS_STATUS, codeHttpCreated);
     }
 }
-

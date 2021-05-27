@@ -2,11 +2,8 @@ package file.generation.services;
 
 public class FileGenerationResponse {
 
-    private String status;
-    private Integer code;
-
-    public FileGenerationResponse() {
-    }
+    private final String status;
+    private final Integer code;
 
     public FileGenerationResponse(String status, Integer code) {
         this.status = status;
@@ -17,15 +14,8 @@ public class FileGenerationResponse {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public Integer getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
-        this.code = code;
-    }
 }
