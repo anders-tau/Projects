@@ -1,16 +1,24 @@
 package web.service.models;
 
-public class Fields {
+import web.service.misc.AppDateTimeProcessing;
+import web.service.misc.AppGetRandomValue;
+
+public class AppFields {
 
     private long id;
+    private final long dateTime;
     private String param1;
     private String param2;
     private String param3;
     private String param4;
     private String param5;
 
-    public Fields() {
-        this.id = 1;
+    public AppFields() {
+
+        long longYearMonthDay = Long.parseLong(new AppDateTimeProcessing().getDateTimeString());
+
+        this.id = new AppGetRandomValue().getRandom();
+        this.dateTime = longYearMonthDay;
         this.param1 = "Param1";
         this.param2 = "Param2";
         this.param3 = "Param3";
@@ -62,4 +70,5 @@ public class Fields {
         this.param5 = param5;
     }
 
+    public long getDateTime() { return dateTime; }
 }
